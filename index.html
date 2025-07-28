@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PRISMA</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Fonts (first tries Neue Haas if self‑hosted, then falls back) -->
+  <style>
+    @font-face {
+      font-family: "Neue Haas Grotesk Text Pro";
+      src: local("Neue Haas Grotesk Text Pro");
+      font-display: swap;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #FCFDFD;      /* slide background :contentReference[oaicite:5]{index=5} */
+      --text-main:#404040;/* body copy                :contentReference[oaicite:6]{index=6} */
+      --text-muted:#7F7F7F;/* email line               :contentReference[oaicite:7]{index=7} */
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      background:var(--bg);
+      color:var(--text-main);
+      font-family:"Neue Haas Grotesk Text Pro","Helvetica Neue",Inter,
+                  system-ui,sans-serif;
+      line-height:1.5;
+
+      /* centering everything */
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:2rem 6%;
+    }
+
+    /* logo */
+    .logo{
+      max-width:480px;      /* scales on small screens */
+      width:80%;
+      height:auto;
+      margin-bottom:2.5rem;
+    }
+
+    /* tagline */
+    .tagline{
+      font-size:clamp(1rem,2.5vw,1.25rem);
+      max-width:720px;
+      margin-bottom:1.75rem;
+    }
+
+    /* email */
+    .email{
+      font-size:1rem;
+      color:var(--text-muted);
+      text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1) Logo -->
+  <!-- Put your logo file (PNG/SVG) in the same folder and rename if necessary -->
+  <img src="prisma-logo.png" alt="PRISMA Industrial logo" class="logo">
+
+  <!-- 2) Tagline -->
+  <p class="tagline">
+    PRISMA is an investment and development firm<br>
+    focused on Industrial Real Estate in Mexico. :contentReference[oaicite:8]{index=8}
+  </p>
+
+  <!-- 3) Contact email -->
+  <a href="mailto:contacto@prismacap.mx" class="email">
+    contacto@prismacap.mx :contentReference[oaicite:9]{index=9}
+  </a>
+
+</body>
+</html>
