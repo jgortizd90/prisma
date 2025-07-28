@@ -5,7 +5,7 @@
   <title>PRISMA</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- Fonts (first tries Neue Haas if self‑hosted, then falls back) -->
+  <!-- Font stack: tries Neue Haas first, then falls back -->
   <style>
     @font-face {
       font-family: "Neue Haas Grotesk Text Pro";
@@ -17,67 +17,75 @@
 
   <style>
     :root{
-      --bg: #FCFDFD;      /* slide background :contentReference[oaicite:5]{index=5} */
-      --text-main:#404040;/* body copy                :contentReference[oaicite:6]{index=6} */
-      --text-muted:#7F7F7F;/* email line               :contentReference[oaicite:7]{index=7} */
+      --bg: #F8F9FA;
+      --text-main: #404040;
+      --text-muted: #6B6B6B;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
+
     body{
       background:var(--bg);
       color:var(--text-main);
-      font-family:"Neue Haas Grotesk Text Pro","Helvetica Neue",Inter,
-                  system-ui,sans-serif;
-      line-height:1.5;
+      font-family:
+        "Neue Haas Grotesk Text Pro",
+        "Helvetica Neue",
+        Inter,
+        system-ui,
+        sans-serif;
+      line-height:1.6;
 
-      /* centering everything */
+      /* centre everything */
       min-height:100vh;
       display:flex;
       flex-direction:column;
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:2rem 6%;
+      padding:3rem 8%;
     }
 
-    /* logo */
+    /* logo image or word‑mark + cube */
     .logo{
-      max-width:480px;      /* scales on small screens */
-      width:80%;
+      max-width:620px;      /* bigger logo */
+      width:90%;
       height:auto;
-      margin-bottom:2.5rem;
+      margin-bottom:4rem;   /* more breathing room */
     }
 
-    /* tagline */
+    /* main copy */
     .tagline{
-      font-size:clamp(1rem,2.5vw,1.25rem);
-      max-width:720px;
-      margin-bottom:1.75rem;
+      font-size:clamp(1.4rem, 3vw, 2rem); /* MUCH larger */
+      font-weight:400;
+      max-width:800px;
+      margin-bottom:3rem;
+      line-height:1.4;
     }
 
-    /* email */
+    /* email link */
     .email{
-      font-size:1rem;
+      font-size:1.25rem;    /* larger */
       color:var(--text-muted);
       text-decoration:none;
     }
+    .email:hover{color:var(--text-main)}
   </style>
 </head>
 <body>
 
-  <!-- 1) Logo -->
-  <!-- Put your logo file (PNG/SVG) in the same folder and rename if necessary -->
+  <!-- 1) LOGO -->
+  <!-- Rename the file on disk to prisma-logo.png (or edit the src below) -->
   <img src="prisma-logo.png" alt="PRISMA Industrial logo" class="logo">
 
-  <!-- 2) Tagline -->
+  <!-- 2) TAGLINE -->
   <p class="tagline">
-    PRISMA is an investment and development firm<br>
-    focused on Industrial Real Estate in Mexico. :contentReference[oaicite:8]{index=8}
+    PRISMA is an investment and development firm <br>
+    focused on Industrial&nbsp;Real&nbsp;Estate in&nbsp;Mexico.
   </p>
 
-  <!-- 3) Contact email -->
+  <!-- 3) CONTACT -->
   <a href="mailto:contacto@prismacap.mx" class="email">
-    contacto@prismacap.mx :contentReference[oaicite:9]{index=9}
+    contacto@prismacap.mx
   </a>
 
 </body>
