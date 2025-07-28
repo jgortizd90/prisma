@@ -5,7 +5,7 @@
   <title>PRISMA</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- Font stack: prefers Neue Haas if you host it locally, falls back to Inter / system -->
+  <!-- Font stack -->
   <style>
     @font-face {
       font-family: "Neue Haas Grotesk Text Pro";
@@ -22,10 +22,9 @@
       --text-main: #404040;
       --text-muted: #6B6B6B;
 
-      /* fluid spacing scale */
-      --space-s: clamp(2rem, 4vh, 3rem);  /* small gap */
-      --space-m: clamp(3rem, 6vh, 4rem);  /* medium gap */
-      --space-l: clamp(4rem, 8vh, 6rem);  /* large gap */
+      /* fixed spacing—simpler & closer to the “good” version */
+      --gap-logo:   4rem;      /* logo → tagline */
+      --gap-email:  3rem;      /* tagline → email */
     }
 
     /* reset */
@@ -42,39 +41,37 @@
         sans-serif;
       line-height:1.5;
 
-      /* center stack */
       min-height:100vh;
       display:flex;
       flex-direction:column;
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:var(--space-l) 6%;
+      padding:3rem 6%;
     }
 
     /* logo */
     .logo{
-      max-width:820px;          /* large on desktop, scales down */
-      width:95%;
+      max-width:700px;          /* back to earlier, not jumbo */
+      width:90%;
       height:auto;
-      margin-bottom:var(--space-l);
+      margin-bottom:var(--gap-logo);
     }
 
     /* tagline */
     .tagline{
-      font-size:clamp(2rem, 5vw, 3rem);  /* ≈32‑48 px */
+      font-size:clamp(1.6rem, 4.5vw, 2.5rem); /* ≈25‑40 px */
       font-weight:400;
-      max-width:1000px;
-      margin-bottom:var(--space-m);
+      max-width:960px;
       line-height:1.35;
+      margin-bottom:var(--gap-email);
     }
 
     /* email */
     .email{
-      font-size:1.5rem;        /* ≈24 px */
+      font-size:1.25rem;        /* ≈20 px */
       color:var(--text-muted);
       text-decoration:none;
-      margin-top:var(--space-s);
     }
     .email:hover{color:var(--text-main)}
   </style>
@@ -82,7 +79,6 @@
 <body>
 
   <!-- 1) Logo -->
-  <!-- If your file has a different name, change the src path below -->
   <img src="prisma-logo.png" alt="PRISMA Industrial logo" class="logo">
 
   <!-- 2) Tagline -->
