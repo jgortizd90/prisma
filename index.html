@@ -22,9 +22,9 @@
       --text-main: #404040;
       --text-muted: #6B6B6B;
 
-      /* fixed spacing—simpler & closer to the “good” version */
-      --gap-logo:   4rem;      /* logo → tagline */
-      --gap-email:  3rem;      /* tagline → email */
+      /* spacings */
+      --gap-logo: 4rem;   /* logo → tagline */
+      --gap-email: 3rem;  /* tagline → email */
     }
 
     /* reset */
@@ -52,15 +52,15 @@
 
     /* logo */
     .logo{
-      max-width:700px;          /* back to earlier, not jumbo */
+      max-width:700px;          /* desktop cap */
       width:90%;
       height:auto;
       margin-bottom:var(--gap-logo);
     }
 
-    /* tagline */
+    /* tagline – ~10 % smaller */
     .tagline{
-      font-size:clamp(1.6rem, 4.5vw, 2.5rem); /* ≈25‑40 px */
+      font-size:clamp(1.44rem, 4vw, 2.25rem);  /* was 1.6–2.5 rem */
       font-weight:400;
       max-width:960px;
       line-height:1.35;
@@ -69,7 +69,7 @@
 
     /* email */
     .email{
-      font-size:1.25rem;        /* ≈20 px */
+      font-size:1.25rem;
       color:var(--text-muted);
       text-decoration:none;
     }
@@ -78,16 +78,16 @@
 </head>
 <body>
 
-  <!-- 1) Logo -->
+  <!-- Logo -->
   <img src="prisma-logo.png" alt="PRISMA Industrial logo" class="logo">
 
-  <!-- 2) Tagline -->
+  <!-- Tagline -->
   <p class="tagline">
     PRISMA is an investment and development firm<br>
     focused on Industrial&nbsp;Real&nbsp;Estate in&nbsp;Mexico.
   </p>
 
-  <!-- 3) Contact -->
+  <!-- Contact -->
   <a href="mailto:contacto@prismacap.mx" class="email">
     contacto@prismacap.mx
   </a>
